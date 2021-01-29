@@ -85,9 +85,8 @@ Build Command:  (npm.cmd run-script build) -> npm.cmd run-script build (Enterキ
 Start Command: (npm.cmd run-script start) -> npm.cmd run-script start (Enterキー)  
 Do you plan on modifying this backend? (Y/n) -> Yes  
   
-Enter your Amazon App ID for your OAuth flow: ->   
-amzn1.application-oa2-client.2aa4adaf5aed423bb5ca3640ac91fc91  
-Enter your Amazon App Secret for your OAuth flow: ->   46e02b9555ea94a272e80a18b29fcf8954149744dd2463bd903a279efd7b901a  
+Enter your Amazon App ID for your OAuth flow: -> amzn1.application-oa2-client.2aa4adaf5aed423bb5ca3640ac91fc91  
+Enter your Amazon App Secret for your OAuth flow: ->  46e02b9555ea94a272e80a18b29fcf8954149744dd2463bd903a279efd7b901a  
 
 "Successfully pulled backend environment dev from the cloud." が表示されたらビルド完了です。  
 
