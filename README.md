@@ -52,11 +52,14 @@ AWSのユーザー設定を行います。
   
 Specify the AWS Region -> ap-northeast-1（上下カーソルで選択後、Enterキー）  
 user name: -> [任意の名前を入力]  
+  
 Enter the access key of the newly created user:  
 ? accessKeyId:  
 ? secretAccessKey:  
-(~/.aws/credentials、もしくはAWSのIAMユーザー情報を参照)  
-? Profile Name:  default (~/.aws/credentialsが書き変わるため注意)  
+※ ~/.aws/credentials、もしくはAWSのIAMユーザー情報を参照  
+  
+? Profile Name:  default 
+※ ~/.aws/credentialsが書き変わるため注意  
 
 ### `npx create-react-app [任意のプロジェクト名]`
 現在のディレクトリにプロジェクトを作成します。  
