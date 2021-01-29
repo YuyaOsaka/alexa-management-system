@@ -39,6 +39,56 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## ビルド手順
+npm startコマンドでローカル環境にてアプリを実行するにあたって必要な設定となります。
+Node.js、npmがインストールされていることが前提です。
+
+### `npm install -g @aws-amplify/cli`
+Amplifyの機能を使用するためにCLIツールをインストールしてください。
+
+### `amplify configure`
+AWSのユーザー設定を行います。
+以下は追加入力例です。
+
+Specify the AWS Region -> ap-northeast-1（上下カーソルで選択後、Enterキー）
+user name: -> [任意の名前を入力]
+Enter the access key of the newly created user:
+? accessKeyId: 
+? secretAccessKey: 
+（~/.aws/credentials、もしくはAWSのIAMユーザー情報を参照）
+? Profile Name:  default (~/.aws/credentialsが書き変わるため注意)
+
+### `npx create-react-app [任意のプロジェクト名]`
+現在のディレクトリにプロジェクトを作成します。
+以降のコマンドはプロジェクトディレクトリにて行うため、cd [作成したプロジェクト名]で作業ディレクトリを切り替えてください。
+
+### `npm install aws-amplify`
+### `npm install aws-amplify-react`
+動作のための必須モジュールのインストールを行います。ユーザー側の追加入力はありません。
+
+### `amplify pull --appId d3kd3sbl5rtsoq --envName dev`
+amplify設定、aws-exports.jsを取得します。
+以下は追加入力例です。
+
+Do you want to use an AWS profile? -> Yes
+Please choose the profile you want to use (Use arrow keys) -> default (Enterキー)
+Which app are you working on? (Use arrow keys) -> d3kd3sbl5rtsoq (Enterキー)
+Choose your default editor: (Use arrow keys) -> Visual Studio Code
+Choose the type of app that you're building (Use arrow keys) -> javascript
+What javascript framework are you using (Use arrow keys) -> react
+Source Directory Path:  (src) -> src (Enterキー)
+Distribution Directory Path: (build) ->build (Enterキー)
+Build Command:  (npm.cmd run-script build) -> npm.cmd run-script build (Enterキー)
+Start Command: (npm.cmd run-script start) -> npm.cmd run-script start (Enterキー)
+Do you plan on modifying this backend? (Y/n) -> Yes
+
+Enter your Amazon App ID for your OAuth flow: -> 
+amzn1.application-oa2-client.2aa4adaf5aed423bb5ca3640ac91fc91
+Enter your Amazon App Secret for your OAuth flow: -> 46e02b9555ea94a272e80a18b29fcf8954149744dd2463bd903a279efd7b901a
+
+"Successfully pulled backend environment dev from the cloud." が表示されたらビルド完了です。
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
