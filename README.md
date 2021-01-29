@@ -58,7 +58,7 @@ Enter the access key of the newly created user:
 ? secretAccessKey:  
 ※ ~/.aws/credentials、もしくはAWSのIAMユーザー情報を参照  
   
-? Profile Name:  default 
+? Profile Name:  default  
 ※ ~/.aws/credentialsが書き変わるため注意  
 
 ### `npx create-react-app [任意のプロジェクト名]`
